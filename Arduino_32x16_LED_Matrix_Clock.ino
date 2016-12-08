@@ -4,6 +4,10 @@
    @brief Ardino 32 * 16 Led Matrix Clock
       DS3231:  SDA pin   -> Arduino Analog 4
                SCL pin   -> Arduino Analog 5
+
+             Download the library here:
+             http://www.rinkydinkelectronics.com/library.php?id=73
+
       32 * 16 LED MATRIX AD-501-C:
                1:VCC    pin -> Arduino Degital 6
                2:SIN1   pin -> Arduino Degital 7
@@ -17,7 +21,7 @@
               10:GND    pin  -> GND
 
    @author Kei Takagi
-   @date 2016.4.9
+   @date 2016.12.4
 
    Copyright (c) 2016 Kei Takagi
    Released under the MIT license
@@ -333,7 +337,7 @@ void loop()
       for (i = 0; i < 15; i++) anime[1][i + 16] = font[(HourL + 1) % 10][i];
     }
 
-    if (HourL == 9) {
+    if (HourL == 9 && MinH == 5 && MinL == 9) {
       HourHF = true;
       for (i = 0; i < 15; i++) anime[0][i + 16] = font[(HourH + 1) % 3][i];
     }
